@@ -1,7 +1,24 @@
 import json
+import pandas as pd
 
 a = "The quick brown fox jumps over the lazy dog dog"
 a_ = a.split(" ")
+
+File_location = "/content/TestFile.cell"
+
+myFile = pd.read_excel(File_location,
+                       header = 1,
+                       usecols = "c")
+
+print(myFile)
+
+
+for i in myFile:
+  print("가", i)
+
+
+
+print("\n\n\n\n\n")
 
 json = {}
 #print(json)
